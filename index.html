@@ -7,21 +7,20 @@
     body, html { margin: 0; width: 100%; height: 100%; }
     #viewer { width: 100%; height: 100%; display: block; }
   </style>
-  <!-- Esto asegura que las rutas relativas (ej. Atelier.splat) se resuelvan bajo /atelier_gaussian_splat/ -->
-  <base href="/atelier_gaussian_splat/">
 </head>
 <body>
   <canvas id="viewer"></canvas>
   <script type="module">
-    import { Viewer } from 'https://cdn.jsdelivr.net/npm/gsplat@1.2.9/dist/gsplat.esm.js';
+    import { Viewer } from 'gsplat.js';
 
     const canvas = document.getElementById('viewer');
     const viewer = new Viewer({ canvas });
 
-    // Asegúrate de que el .splat esté en la raíz de la rama gh-pages
-    viewer.load('atelier.splat').then(() => {
+    // Cambia esta ruta por tu archivo .splat o .ply
+    viewer.load('../atelier.splat').then(() => {
       viewer.start();
     });
   </script>
 </body>
 </html>
+

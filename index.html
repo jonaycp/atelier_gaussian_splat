@@ -1,0 +1,15 @@
+import * as SPLAT from "gsplat";
+
+const scene    = new SPLAT.Scene();
+const camera   = new SPLAT.Camera();
+const renderer = new SPLAT.WebGLRenderer();
+const controls = new SPLAT.OrbitControls(camera, renderer.canvas);
+
+SPLAT.Loader.load("models/mi_modelo.splat").then((splats) => {
+  scene.add(splats);
+  renderer.setAnimationLoop(() => {
+    controls.update();
+    renderer.render(scene, camera);
+  });
+});
+

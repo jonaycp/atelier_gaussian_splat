@@ -1,0 +1,15 @@
+{
+  "name": "gsplat-viewer",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npx http-server -c-1 . -p 8080",
+    "deploy": "gh-pages -d ."
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  },
+  "dependencies": {
+    "gsplat.js": "^x.y.z"
+  }
+}
+

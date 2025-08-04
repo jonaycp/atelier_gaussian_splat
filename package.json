@@ -2,7 +2,7 @@
   "name": "gsplat-viewer",
   "version": "1.0.0",
   "description": "Visor de Gaussian Splatting con gsplat.js",
-  "homepage": "https://jonaycp.github.io/atelier_gaussian_splat",
+  "homepage": "https://jonaycp.github.io/atelier_gaussian_splat/",
   "scripts": {
     "start": "npx http-server -c-1 . -p 8080",
     "deploy": "gh-pages -d ."
